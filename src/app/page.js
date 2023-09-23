@@ -1,6 +1,12 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import Link from "next/link";
+import {navbar} from "./Components/navbar"
+import carousel from "./Components/carousel"
+
+
 export default function Home() {
-  return <main className={styles.main}></main>;
+  return (
+    <div>
+    {navbar()}
+    {carousel()}
+   </div>
+);
 }
