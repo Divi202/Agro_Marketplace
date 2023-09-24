@@ -1,4 +1,5 @@
 import "./globals.css";
+import "@/style/home.css"; // External Css
 import { Inter } from "next/font/google";
 // add bootstrap css
 import "bootstrap/dist/css/bootstrap.css";
@@ -19,6 +20,8 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Navbar></Navbar>
         {children}
+        {/* Created to test the connectivity of the css file   */}
+        <h1 className="textcss">Hello</h1>
       </body>
     </html>
   );
