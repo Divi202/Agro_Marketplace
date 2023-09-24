@@ -1,12 +1,8 @@
-import {navbar} from "./Components/navbar"
-import carousel from "./Components/carousel"
-
-
+import Carousel from "src/Components/Carousel.js";
 export default function Home() {
   return (
     <div>
-    {navbar()}
-    {carousel()}
-   </div>
-);
+      <Carousel></Carousel>
+    </div>
+  );
 }
