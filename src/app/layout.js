@@ -1,6 +1,6 @@
 import "./globals.css";
-import "@/style/home.css"; // External Css 
-import {Inter} from "next/font/google";
+import "@/style/home.css"; // External Css
+import { Inter } from "next/font/google";
 // add bootstrap css
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -18,7 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="bck">
         <Navbar></Navbar>
         {children}
         <Footer></Footer>
