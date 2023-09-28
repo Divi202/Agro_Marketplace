@@ -1,3 +1,20 @@
 .bck {
   background-color: #96c291;
 }
+.about-main-div{
+  display: flex;
+  margin:30px 5%;
+ 
+}
+.left-div{
+  height: 400px;
+  width: 50%;
+  border: 1px solid rgb(1, 44, 1);
+  background-color: #a7b0a6;
+  
+}
+.right-div{
+  height: 400px;
+  width: 50%;
+  background-color: white;  
+}
