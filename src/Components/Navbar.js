@@ -31,6 +31,11 @@ export default function Navbar() {
               Contact-Us
             </Link>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link" href="/signup">
+              Signup
+            </Link>
+          </li>
         </ul>
         <div className="social">
           <div className="fb"></div>
