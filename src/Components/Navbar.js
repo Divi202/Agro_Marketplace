@@ -1,33 +1,44 @@
+import Link from "next/link";
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg ">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" href="/">
           Agro Marketplace
-        </a>
+        </Link>
+        
 
-        <ul className="navbar-nav me-2 mb-2 mb-lg-0">
+        <ul className="navbar-nav ">
           <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#">
+            <Link className="nav-link active" aria-current="page" href="/">
               Home
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <Link className="nav-link" href="/about">
               About
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <Link className="nav-link" href="/services">
               Services
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <Link className="nav-link" href="/contact">
               Contact-Us
-            </a>
+            </Link>
           </li>
         </ul>
+        <div className="social"> 
+        <div className="fb">
+        </div>
+        <div className="insta">
+
+        </div>
+        <div className="linkedin"></div>
+
+        </div>
       </div>
     </nav>
   );

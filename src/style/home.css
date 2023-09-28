@@ -1,4 +1,60 @@
-/* Created to test the connectivity of the file  */
-.textcss {
-  color: red;
+* {
+  margin: 0;
+  padding: 0;
+
+}
+/* Navbar */
+.container-fluid {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar {
+  background-color: green;
+  
+ 
+}
+
+.main-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+
+  /* Social */
+  .social{
+    display: flex;
+    gap: 20px;
+  }
+.fb{
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+
+}
+.insta{
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+
+}
+.linkedin{
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+
+}
+/* Footer */
+
+.footer{
+  background-color: #20e555;
+  height:auto;
+  width: auto;
+  text-align: center;
+
 }
