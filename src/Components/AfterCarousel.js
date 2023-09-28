@@ -1,9 +1,9 @@
 "use client";
 import Link from "next/link";
-import "src/style/aftercrousel.css"
+import "src/style/aftercrousel.css";
 export default function AfterCarousel() {
   return (
-    <div className="mainDiv boxdiv m-5 mb-5" >
+    <div className="mainDiv  m-5 mb-5">
       <div className="div1">
         <h3 className="heading">Organic Vegetables</h3>
         <p className="paragraph">
