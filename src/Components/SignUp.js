@@ -11,12 +11,19 @@ export default function SignUp() {
   const [phoneno, setPhoneno] = useState("");
   const [pass, setPass] = useState("");
   const [cpass, setCpass] = useState("");
-  const [userType, setUserType] = useState("CUSTOMER");
+  const [userType, setUserType] = useState("");
   const [gender, setGender] = useState("");
+
   // function to handle register btn
   const handleRegister = () => {
     console.log("btn entered");
     console.log(fname, lname, email, pass, cpass, phoneno, gender, userType);
+  };
+  const handleGenderChange = (e) => {
+    setGender(e.target.value);
+  };
+  const handleUsertype = (e) => {
+    setUserType(e.target.value);
   };
   return (
     <>
@@ -33,7 +40,8 @@ export default function SignUp() {
               name="options"
               id="option1"
               autoComplete="off"
-              checked
+              value="vendor"
+              onChange={handleUsertype}
             />
             <label className="btn btn-dark mx-2" htmlFor="option1">
               Vendor
@@ -45,6 +53,8 @@ export default function SignUp() {
               name="options"
               id="option2"
               autoComplete="off"
+              value="customer"
+              onChange={handleUsertype}
             />
             <label className="btn btn-dark mx-2" htmlFor="option2" disabled>
               Customer
@@ -71,27 +81,22 @@ export default function SignUp() {
               }}
               required
             ></input>
-            {/* gender */}
 
+            {/* gender */}
             <label className="form-check-label" htmlFor="flexRadioDefault1">
               Gender:
             </label>
             <div className="selectGender">
               <div className="form-check ">
                 <input
-                  className="form-check-input "
+                  className="form-check-input"
                   type="radio"
                   name="flexRadioDefault"
                   id="flexRadioDefault1"
-                  value={gender}
-                  onChange={(e) => {
-                    setGender("male");
-                  }}
+                  value="male"
+                  onChange={handleGenderChange}
                 />
-                <label
-                  className="form-check-label "
-                  htmlFor="flexRadioDefault1"
-                >
+                <label className="form-check-label" htmlFor="flexRadioDefault1">
                   Male
                 </label>
               </div>
@@ -101,11 +106,8 @@ export default function SignUp() {
                   type="radio"
                   name="flexRadioDefault"
                   id="flexRadioDefault2"
-                  value={gender}
-                  onChange={(e) => {
-                    setGender("female");
-                  }}
-                  checked
+                  value="female"
+                  onChange={handleGenderChange}
                 />
                 <label className="form-check-label" htmlFor="flexRadioDefault2">
                   Female
