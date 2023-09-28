@@ -1,5 +1,6 @@
 "use client";
-
+// css file
+import "@/style/signup.css";
 import { useState } from "react";
 
 export default function SignUp() {
@@ -22,7 +23,7 @@ export default function SignUp() {
       <div className="row container-fluid">
         <div className="col-4"></div>
         <div className="col-4">
-          <h1 className="m-3 p-2">Register</h1>
+          <h1 className="m-3 p-2 register">Register</h1>
           <form>
             {/* choose vendor/customer */}
             <label>You are :</label>
@@ -31,10 +32,10 @@ export default function SignUp() {
               className="btn-check mx-2"
               name="options"
               id="option1"
-              autocomplete="off"
+              autoComplete="off"
               checked
             />
-            <label className="btn btn-dark mx-2" for="option1">
+            <label className="btn btn-dark mx-2" htmlFor="option1">
               Vendor
             </label>
 
@@ -43,9 +44,9 @@ export default function SignUp() {
               className="btn-check mx-2"
               name="options"
               id="option2"
-              autocomplete="off"
+              autoComplete="off"
             />
-            <label className="btn btn-dark mx-2" for="option2" disabled>
+            <label className="btn btn-dark mx-2" htmlFor="option2" disabled>
               Customer
             </label>
             {/* First name  */}
@@ -71,6 +72,46 @@ export default function SignUp() {
               required
             ></input>
             {/* gender */}
+
+            <label className="form-check-label" htmlFor="flexRadioDefault1">
+              Gender:
+            </label>
+            <div className="selectGender">
+              <div className="form-check ">
+                <input
+                  className="form-check-input "
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                  value={gender}
+                  onChange={(e) => {
+                    setGender("male");
+                  }}
+                />
+                <label
+                  className="form-check-label "
+                  htmlFor="flexRadioDefault1"
+                >
+                  Male
+                </label>
+              </div>
+              <div className="form-check">
+                <input
+                  className="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault2"
+                  value={gender}
+                  onChange={(e) => {
+                    setGender("female");
+                  }}
+                  checked
+                />
+                <label className="form-check-label" htmlFor="flexRadioDefault2">
+                  Female
+                </label>
+              </div>
+            </div>
             {/* Email  */}
             <input
               className="form-control my-3 p-2"
@@ -128,7 +169,7 @@ export default function SignUp() {
                 value=""
                 id="flexCheckDefault"
               />
-              <label className="form-check-label" for="flexCheckDefault">
+              <label className="form-check-label" htmlFor="flexCheckDefault">
                 Plese check to agree to terms and conditions of Agro
                 Marketplace.
               </label>
