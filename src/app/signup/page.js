@@ -1,7 +1,7 @@
-import React from "react";
+import SignUp from "@/Components/SignUp";
 
 function page() {
-  return <h1>Register</h1>;
+  return <SignUp></SignUp>;
 }
 
 export default page;
