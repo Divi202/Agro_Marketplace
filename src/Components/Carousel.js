@@ -37,7 +37,7 @@ export default function Carousel() {
           <div className="carousel-item active">
             <Image
               className="d-block w-100"
-              src={Photo1}
+              src={Photo2}
               width={1600}
               height={500}
               alt="Carousel photo 1"
@@ -47,7 +47,7 @@ export default function Carousel() {
             {" "}
             <Image
               className="d-block w-100"
-              src={Photo2}
+              src={Photo1}
               width={1600}
               height={500}
               alt="Carousel photo 2"
@@ -56,7 +56,7 @@ export default function Carousel() {
           <div className="carousel-item">
             <Image
               className="d-block w-100"
-              src={Photo1}
+              src={Photo2}
               width={1600}
               height={500}
               alt="Carousel photo 3"

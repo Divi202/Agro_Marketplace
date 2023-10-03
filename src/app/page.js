@@ -1,3 +1,4 @@
+import About from "@/Components/About";
 import AfterCarousel from "@/Components/AfterCarousel";
 import Carousel from "src/Components/Carousel.js";
 export default function Home() {
@@ -5,6 +6,7 @@ export default function Home() {
     <div>
       <Carousel></Carousel>
       <AfterCarousel></AfterCarousel>
+      <About></About>
     </div>
   );
 }
