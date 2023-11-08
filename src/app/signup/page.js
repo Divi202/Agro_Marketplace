@@ -1,7 +1,9 @@
+import Login from "@/Components/Login";
 import SignUp from "@/Components/SignUp";
 
 function page() {
-  return <SignUp></SignUp>;
+  return <Login></Login>;
+  // <SignUp></SignUp>;
 }
 
 export default page;

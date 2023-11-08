@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+section {
+  /* background-image: url("/src/images/loginbck.jpg"); */
+  height: 595px;
+  width: 1519px;
+  background-size: cover;
+  display: flex;
+}
+.ltsec {
+  background-color: #f5eec8;
+  color: black;
+  width: 759.5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.logo-name {
+  margin-bottom: 0.6rem;
+}
+.loghead {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.welcome {
+  font-size: 14px;
+}
+.refLogin {
+  display: flex;
+  justify-content: space-between;
+}
+.login_btn {
+  background-color: #f5eec8;
+  width: 190px;
+  height: 40px;
+  border: 1px solid 555843;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.login_btn:hover {
+  background-color: #ffdbaa;
+  border: 3px solid #a7d397;
+}
+.idlog {
+  display: flex;
+}
+.idlog hr {
+  width: 138px;
+}
+.idlog p {
+  margin-top: 7px;
+  font-size: 10px;
+  font-weight: 700;
+}
+/* .input_box {
+  display: flex;
+} */
+.login_boxes {
+  display: block;
+  background-color: #f5eec8;
+  width: 400px;
+  height: 40px;
+  border: 1px solid 555843;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.login_boxes:hover {
+  background-color: #ffdbaa;
+  border: 3px solid #a7d397;
+}
+.forgot_pass {
+  color: #a7d397;
+  font-size: 12px;
+  font-weight: 700;
+}
+.forgot_pass:hover {
+  color: black;
+}
+/* 
+.slogan {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+} */
+.Login_btn {
+  background-color: #a7d397;
+  width: 400px;
+  height: 40px;
+  border: 1px solid 555843;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+.Login_btn:hover {
+  background-color: #ffdbaa;
+  border: 3px solid #a7d397;
+}
+.noacc p {
+  font-size: 12px;
+  font-weight: 700;
+}
+#noacc2:hover {
+  color: black;
+}
+#noacc1 {
+  display: inline;
+}
+#noacc2 {
+  color: #a7d397;
+  display: inline;
+}
