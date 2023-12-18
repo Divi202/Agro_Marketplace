@@ -12,7 +12,7 @@ export default function Navbar() {
 
         <ul className="navbar-nav ">
           <li className="nav-item">
-            <Link className="nav-link active" aria-current="page" href="/">
+            <Link className="nav-link " href="/">
               Home
             </Link>
           </li>
@@ -43,9 +43,12 @@ export default function Navbar() {
           </li>
         </ul>
         <div className="social">
-          <div className="fb"></div>
-          <div className="insta"></div>
-          <div className="linkedin"></div>
+          <div>
+            {" "}
+            <Link className="nav-link text-white" href="/cart">
+              Cart
+            </Link>
+          </div>
         </div>
       </div>
     </nav>
