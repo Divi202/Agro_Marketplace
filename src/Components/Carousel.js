@@ -2,8 +2,8 @@
 import Image from "next/image";
 import { useEffect } from "react";
 //  import slideshow photes
-import Photo1 from "src/images/SS_photo1.jpg";
-import Photo2 from "src/images/SS_photo2.jpg";
+import Photo1 from "@/images/SS_photo1.jpg";
+import Photo2 from "@/images/SS_photo2.jpg";
 export default function Carousel() {
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");

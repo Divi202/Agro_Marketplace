@@ -2,7 +2,8 @@
 // css file
 import "@/style/signup.css";
 import { useState } from "react";
-
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 export default function SignUp() {
   // state to take input from the form
   const [fname, setFname] = useState("");
@@ -14,16 +15,38 @@ export default function SignUp() {
   const [userType, setUserType] = useState("");
   const [gender, setGender] = useState("");
 
-  // function to handle register btn
-  const handleRegister = () => {
-    console.log("btn entered");
-    console.log(fname, lname, email, pass, cpass, phoneno, gender, userType);
-  };
   const handleGenderChange = (e) => {
     setGender(e.target.value);
   };
   const handleUsertype = (e) => {
     setUserType(e.target.value);
+  };
+  // Router used to navigate to another page after signup
+  const router = useRouter();
+  // Connect to Database through API
+  // function to handle register btn
+  const handleRegister = async () => {
+    // first check whether the password and the confirm password is same or not
+    console.warn(fname, lname, email, phoneno, pass, cpass, userType, gender);
+    let result = await fetch("http://localhost:5000/user", {
+      method: "POST",
+      body: JSON.stringify({
+        fname,
+        lname,
+        email,
+        phoneno,
+        pass,
+        cpass,
+        userType,
+        gender,
+      }),
+      headers: { "Content-Type": "application/json" },
+    });
+    result = await result.json();
+    console.log(result);
+    if (result) {
+      router.push("/");
+    }
   };
   return (
     <>
@@ -32,7 +55,7 @@ export default function SignUp() {
         <div className="col-4">
           <h1 className="m-3 p-2 register">Register</h1>
           <form>
-            {/* choose vendor/customer */}
+            {/* choose vendor/user */}
             <label>You are :</label>
             <input
               type="radio"
@@ -53,11 +76,11 @@ export default function SignUp() {
               name="options"
               id="option2"
               autoComplete="off"
-              value="customer"
+              value="user"
               onChange={handleUsertype}
             />
             <label className="btn btn-dark mx-2" htmlFor="option2" disabled>
-              Customer
+              User
             </label>
             {/* First name  */}
             <input
@@ -185,6 +208,13 @@ export default function SignUp() {
               Register
             </button>
           </form>
+
+          <div className="noacc">
+            <p id="noacc1">Already have an account?</p>
+            <Link href="/login" id="noacc2">
+              &nbsp; Login
+            </Link>
+          </div>
         </div>
         <div className="col-4"></div>
       </div>
